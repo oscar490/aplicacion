@@ -1,2 +1,16 @@
 
 /** ADD YOUR AWESOME CODES HERE **/
+
+a.navbar-brand > img {
+  width: 140px;
+}
+
+.header_style_01 .navbar-light .navbar-nav > li a.active ,
+.header_style_01 .navbar-light .navbar-nav > li:hover a, .header_style_01 .navbar-light .navbar-nav > li:focus a
+{
+  background-color: #31a36e;
+}
+
+.slide-text {
+  top: 80%;
+}
