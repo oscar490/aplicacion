@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'InicioController@home');
+
+Route::get('/contacto', 'ContactoController@view');

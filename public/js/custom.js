@@ -2,13 +2,30 @@
     Version: 1.0
 /****************************************** */
 
+$(document).ready(function () {
+
+    let url = location.href;
+
+    $("ul.navbar-nav a.active").removeClass("active");
+
+    $("ul.navbar-nav li > a").each(function() {
+      console.log($(this).attr('href'));
+      console.log(url);
+      if ($(this).attr('href') + "/" == url) {
+
+        $(this).addClass('active');
+      }
+    })
+
+});
+
 (function($) {
     "use strict";
 
    /* ==============================================
     Fixed menu
     =============================================== */
-    
+
 	$(window).on('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.header_style_01').addClass('fixed-menu');
@@ -16,12 +33,12 @@
 			$('.header_style_01').removeClass('fixed-menu');
 		}
 	});
-	
-	
+
+
    /* ==============================================
-		Scroll to top  
+		Scroll to top
 	============================================== */
-		
+
 	if ($('#scroll-to-top').length) {
 		var scrollTrigger = 100, // px
 			backToTop = function () {
@@ -74,12 +91,12 @@
         $(this).html('0');
         count($(this));
     });
-	
-	
+
+
 	/* ==============================================
      FUN FACTS -->
      =============================================== */
-	
+
 	$(".slider-wrapper").owlCarousel({
         items: 1,
         nav: true,
